@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Article;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 class ArticleController extends Controller
 {
     /**
@@ -25,8 +26,9 @@ class ArticleController extends Controller
     {
         return view('articles.list');
     }
-    public function detail(Request $request){
-        return view('articles.detail');
+    public function detail(Request $request,$id){
+        $article = Article::where('id',$id)->first();
+        return view('articles.detail',['article'=>$article]);
     }
     public function add(Request $request){
         return view('news.newsAdd');

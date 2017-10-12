@@ -10,20 +10,15 @@
     <div class="l_box f_l">
         <div class="topnews">
             <h2>您现在的位置是：<a href="http://www.jiyouh.com/">首页</a>&nbsp;>&nbsp;<a href="http://www.jiyouh.com/shouji/">智能手机</a>&nbsp;>&nbsp;<a href="http://www.jiyouh.com/shouji/apple/">苹果(Apple)</a></h2>
-            <div class="news_title">传谷歌今年5月将推出iOS版本Android Wear</div>
+            <div class="news_title">{{$article->title}}</div>
 
             <div class="news_author"><span class="au01"><a href='mailto:'>腾讯科技</a></span><span class="au02">2015-03-05</span><span class="au03">共<b><script src=http://www.jiyouh.com/e/public/ViewClick/?classid=6&id=137&addclick=1></script></b>人围观</span><strong class="au04 f_r"><div class="ds-thread-count" data-thread-key="137" data-count-type="comments"></a></div></strong></div>
             <div class="tags"><a href="http://www.jiyouh.com/e/tags/?tagname=%B9%C8%B8%E8&tempid=9" target="_blank">谷歌</a> <a href="http://www.jiyouh.com/e/tags/?tagname=iOS&tempid=9" target="_blank">iOS</a> <a href="http://www.jiyouh.com/e/tags/?tagname=Android+Wear&tempid=9" target="_blank">Android Wear</a></div>
-            <div class="news_about"><strong>简介</strong>真是如此的话，不远的将来，iPhone 6就能够支持Moto 360。</div>
+            <div class="news_about"><strong>简介</strong>{{$article->description}}</div>
             <div class="news_content">
-                <ul>
-                    <p>3月4日，来自法国科技网站01net的报道称，在今年5月举行的谷歌(微博)年度开发者大会中，谷歌将会发布iOS版本的Android Wear。当前，用户的Android Wear智能手表只能同Android智能手机配套使用。</p>
-                    <p><img src="http://www.jiyouh.com/d/file/shouji/apple/2015-03-05/3331864060db5cff76bc07a5939cf9e7.jpg" alt="1.jpg" width="600" height="380" /></p>
-                    <p>苹果将会在本月发布智能手表Apple Watch，不过该产品将仅支持iPhone。不过谷歌的Android操作系统则采取了与iOS截然不同的兼容策略。如果谷歌准许Android Wear智能手表兼容iOS设备，这将会让Android Wear设备与Apple Watch有着极大的差异，可能会促成部分消费者选购Android Wear设备，而不是Apple Watch。至少，这一策略能够极大的扩展Android Wear的用户数量。</p>
-                    <p>Android Wear高级产品经历杰夫&middot;常（Jeff Chang）在去年曾经暗示，谷歌正在考虑Android Wear的跨平台兼容问题，只不过遇到了一些技术性障碍。杰夫&middot;常当时曾向《赫芬顿邮报》表示，&ldquo;这不会永远由我们来决定？这里存在着一些技术限制和应用程序接口约束，我们正在努力克服这些问题。&rdquo;</p>
-                    <p>当前，我们必须把该报道视为谣言。尽管01net是一家有声誉的网站，但报道并未指出消息来源于哪里，仅提到&ldquo;根据我们的信息&rdquo;，并提醒这一消息并未得到证实。</p>
-                    <p>不过即便是如此，想象到不远的将来，iPhone 6能够支持Moto 360将是一件非常有趣的事情。最近，国外一位开发者就越狱自己的Android Wear智能手表，让它能够直接使用iPhone的通知服务。（无忌）</p>         <p align="center" class="pageLink"></p>
-                </ul>
+                <?php
+                    echo htmlspecialchars_decode($article->content);
+                ?>
                 <div class="footend">第一时间获取智能手机行业新鲜资讯和商业动态，可以访问小编的微博<a href="http://weibo.com/jiyouh/" target="_blank">http://weibo.com/jiyouh</a>,如果需要小编陪聊也可以在微信里添加好友,搜索「<span>jiyouhcom</span>」，还可以通过手机扫描左方二维码，关注机友汇微信公众号,即可获得机友汇精华内容推送，并参与相关活动。</div>
             </div>
             <div class="fenx"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_huaban" data-cmd="huaban" title="分享到花瓣"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a></div>

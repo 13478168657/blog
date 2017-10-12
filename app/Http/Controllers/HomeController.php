@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Article;
+use App\Models\ArticleClassify;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        return view('home');
+        $articles = Article::get();
+        return view('home',['articles'=>$articles]);
     }
 }

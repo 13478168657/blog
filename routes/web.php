@@ -14,7 +14,7 @@
     Route::get('/', 'HomeController@index');
     Route::get('logout', 'Auth\LoginController@logout');
     Route::get('article/list', 'Article\ArticleController@index');
-    Route::get('article/detail', 'Article\ArticleController@detail');
+    Route::get('article/detail/{id}.html', 'Article\ArticleController@detail');
 //});
 //Route::post('auth/login','Auth\LoginController@postLogin');
 //Auth::routes();
