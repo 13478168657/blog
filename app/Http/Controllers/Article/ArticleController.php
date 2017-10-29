@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\ArticleClassify;;
 class ArticleController extends Controller
 {
     /**
@@ -22,9 +23,10 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request,$id)
     {
-        return view('articles.list');
+        $articles = Article::where('classify_id',$id)->paginate(10);
+        return view('articles.list',['article'=>$articles]);
     }
     public function detail(Request $request,$id){
         $article = Article::where('id',$id)->first();

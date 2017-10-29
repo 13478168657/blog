@@ -13,7 +13,7 @@
 //Route::group(['middleware'=>['auth']],function(){
     Route::get('/', 'HomeController@index');
     Route::get('logout', 'Auth\LoginController@logout');
-    Route::get('article/list', 'Article\ArticleController@index');
+    Route::get('article/list/{id}.html', 'Article\ArticleController@index');
     Route::get('article/detail/{id}.html', 'Article\ArticleController@detail');
 //});
 //Route::post('auth/login','Auth\LoginController@postLogin');

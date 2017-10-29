@@ -2,29 +2,41 @@
 @section('css')
 <link href="/css/index.css" rel="stylesheet">
 @endsection
+@section('script')
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/velocity.js"></script>
+    <script src="/js/shutter.js"></script>
+    <script>
+        $(function () {
+            $('.shutter').shutter({
+                shutterW: 1000, // 容器宽度
+                shutterH: 358, // 容器高度
+                isAutoPlay: true, // 是否自动播放
+                playInterval: 3000, // 自动播放时间
+                curDisplay: 3, // 当前显示页
+                fullPage: false // 是否全屏展示
+            });
+        });
+    </script>
+@endsection
 @section('content')
 <article>
     <div class="l_box f_l">
         <div class="banner f_l">
-            <script type="text/javascript">
-                //设置
-                myFocus.set({
-                    id:'myFocus',//ID
-                    pattern:'mF_fancy'//风格
-                });
-            </script>
-            <div id="myFocus">
-                <div class="loading"></div>
-                <div class="pic">
-                    <ul>
-                        <li><a href="http://www.jiyouh.com/peijian/cdsb/2015-03-05/139.html" target="_blank" title="细节也要看清楚，华为MWC2015智能手表高清图赏"><img src="http://www.jiyouh.com/d/file/peijian/cdsb/2015-03-05/020b1334822c2304ebf304380ebc42ac.jpg" thumb="" alt="细节也要看清楚，华为MWC2015智能手表高清图赏" /></a></li>
-                        <li><a href="http://www.jiyouh.com/peijian/cdsb/2015-03-02/121.html" target="_blank" title="Huawei TalkBand B2华为智能手环 智选从容"><img src="http://www.jiyouh.com/d/file/peijian/cdsb/2015-03-02/84fb886a9491b382fd432f6e7135afce.jpg" thumb="" alt="Huawei TalkBand B2华为智能手环 智选从容" /></a></li>
-                        <li><a href="http://www.jiyouh.com/shouji/android/2015-02-27/104.html" target="_blank" title="三星Galaxy S6,原来它长这样！"><img src="http://www.jiyouh.com/d/file/shouji/android/2015-02-27/c4c182bc996e131e13a4cfae910aad43.jpg" thumb="" alt="三星Galaxy S6,原来它长这样！" /></a></li>
-                        <li><a href="http://www.jiyouh.com/peijian/cdsb/2015-02-27/96.html" target="_blank" title="苹果正式发出3月9日发布会邀请函 主角很可能是Apple Watch智能手表"><img src="http://www.jiyouh.com/d/file/peijian/cdsb/2015-02-27/62f4c621074b06f3be567fdb765eb10d.jpg" thumb="" alt="苹果正式发出3月9日发布会邀请函 主角很可能是Apple Watch智能手表" /></a></li>
-                        <li><a href="http://www.jiyouh.com/peijian/cdsb/2015-02-24/62.html" target="_blank" title="Apple Watch能否撬动消费者的购买欲望？"><img src="http://www.jiyouh.com/d/file/peijian/cdsb/2015-02-24/3388544e560e8836fdc6937e061e1a0e.jpg" thumb="" alt="Apple Watch能否撬动消费者的购买欲望？" /></a></li>
-                    </ul>
+            <div class="shutter">
+                <div class="shutter-img">
+                  <a href="#" data-shutter-title="Iron Man"><img src="images/shutter_1.jpg" alt="#"></a>
+                  <a href="#" data-shutter-title="Super Man"><img src="images/shutter_2.jpg" alt="#"></a>
+                  <a href="#" data-shutter-title="The Hulk"><img src="images/shutter_3.jpg" alt="#"></a>
+                   <a href="#" data-shutter-title="The your"><img src="images/shutter_4.jpg" alt="#"></a>
                 </div>
-            </div>
+                <ul class="shutter-btn">
+                  <li class="prev"></li>
+                  <li class="next"></li>
+                </ul>
+                <div class="shutter-desc">
+                    <p>Iron Man</p>
+                </div>
         </div>
         <!-- banner代码 结束 -->
         <div class="focustext f_r">
@@ -68,67 +80,6 @@
                     <p>华为荣耀新总裁赵明要完成4000万终端销量、明年突破100亿美元收入的目标。...</p>
                     <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/news/>最新资讯</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/news/2015-03-05/138.html">431</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/news/2015-03-05/138.html" title="华为荣耀新总裁亮相 称今年重点立足海外"><span class="ds-thread-count" data-thread-key="138" data-count-type="comments"></span></a></span>
                         </p>
-                </ul>
-            </div>      
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/shouji/apple/2015-03-05/3331864060db5cff76bc07a5939cf9e7.jpg"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/shouji/apple/2015-03-05/137.html" target="_blank" title="传谷歌今年5月将推出iOS版本Android Wear">传谷歌今年5月将推出iOS版本Android Wear</a></h3>
-                    <p>真是如此的话，不远的将来，iPhone 6就能够支持Moto 360。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/shouji/apple/>苹果(Apple)</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/shouji/apple/2015-03-05/137.html">197</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/shouji/apple/2015-03-05/137.html" title="传谷歌今年5月将推出iOS版本Android Wear"><span class="ds-thread-count" data-thread-key="137" data-count-type="comments"></a></span>
-                        </p>
-                </ul>
-            </div>     
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/shouji/apple/2015-03-05/63211fa1d0a5c60aa3a42b05acdbf13b.png"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/shouji/apple/2015-03-05/136.html" target="_blank" title="半年时间苹果iOS 8普及率终于过了75%！">半年时间苹果iOS 8普及率终于过了75%！</a></h3>
-                    <p>苹果iOS8系统达到四分之三渗透率，花费了六个月时间，目前iOS7系统的渗透率仍然占到22%。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/shouji/apple/>苹果(Apple)</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/shouji/apple/2015-03-05/136.html">102</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/shouji/apple/2015-03-05/136.html" title="半年时间苹果iOS 8普及率终于过了75%！"><span class="ds-thread-count" data-thread-key="136" data-count-type="comments"></a></span>
-                        </p>
-                </ul>
-            </div>      
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/shouji/android/2015-03-05/a4def7e22a4a04a365a928fb8b477e4a.jpg"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/shouji/android/2015-03-05/135.html" target="_blank" title="手机更卡了！安卓5.0停止默认数据加密">手机更卡了！安卓5.0停止默认数据加密</a></h3>
-                    <p>谷歌宣布安卓5.0的默认加密转变成可选项，原因是部分安卓手机的性能受到拖累。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/shouji/android/>安卓(Android)</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/shouji/android/2015-03-05/135.html">109</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/shouji/android/2015-03-05/135.html" title="手机更卡了！安卓5.0停止默认数据加密"><span class="ds-thread-count" data-thread-key="135" data-count-type="comments"></span></a></span>
-                        </p>
-                </ul>
-            </div>      
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/news/2015-03-05/64f2b386eeb41838a109d041b896bd26.jpg"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/news/2015-03-05/134.html" target="_blank" title="华为余承东：未来三到五年小米将消失">华为余承东：未来三到五年小米将消失</a></h3>
-                    <p>余承东认为，未来三到五年多数中国智能手机厂商将消失，华为将成为市场领军者。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/news/>最新资讯</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/news/2015-03-05/134.html">142</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/news/2015-03-05/134.html" title="华为余承东：未来三到五年小米将消失"><span class="ds-thread-count" data-thread-key="134" data-count-type="comments"></span></a></span>
-                    </p>
-                </ul>
-            </div>      
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/news/2015-03-05/5526df6c850c46de65119799cc16a99c.jpg"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/news/2015-03-05/133.html" target="_blank" title="MWC2015观察：移动芯片公司眼界放宽">MWC2015观察：移动芯片公司眼界放宽</a></h3>
-                    <p>芯片厂商的竞争已经从单一产品变为全球性的全模、全产品线、全生态系统竞争。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/news/>最新资讯</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/news/2015-03-05/133.html">89</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/news/2015-03-05/133.html" title="MWC2015观察：移动芯片公司眼界放宽"><span class="ds-thread-count" data-thread-key="133" data-count-type="comments"></span></a></span>
-                    </p>
-                </ul>
-            </div>      
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/shouji/apple/2015-03-05/6f19bb6ced652ad7fffa6d2ad6571f9e.jpg"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/shouji/apple/2015-03-05/132.html" target="_blank" title="苹果要在下代iPhone中植入自己的SIM卡">苹果要在下代iPhone中植入自己的SIM卡</a></h3>
-                    <p>用户未来可以在苹果手机设置中随意切换移动运营商，而不是安装物理芯片卡。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/shouji/apple/>苹果(Apple)</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/shouji/apple/2015-03-05/132.html">104</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/shouji/apple/2015-03-05/132.html" title="苹果要在下代iPhone中植入自己的SIM卡"><span class="ds-thread-count" data-thread-key="132" data-count-type="comments"></span></a></span></p>
-                </ul>
-            </div>      
-            <div class="blogs">
-                <figure><img src="http://www.jiyouh.com/d/file/news/2015-03-05/ab1729345547b9d1a820bfd20eb964cf.jpg"></figure>
-                <ul>
-                    <h3><a href="http://www.jiyouh.com/news/2015-03-05/131.html" target="_blank" title="三星认为高通骁龙810芯片不够好">三星认为高通骁龙810芯片不够好</a></h3>
-                    <p>三星在S6上放弃了高通顶级处理器，没有一种型号的S6配置骁龙810。...</p>
-                    <p class="autor"><span class="lm f_l">[<a href=http://www.jiyouh.com/news/>最新资讯</a>]</span><span class="dtime f_l">2015-03-05</span><span class="viewnum f_r">浏览（<a href="http://www.jiyouh.com/news/2015-03-05/131.html">81</a>）</span><span class="pingl f_r"><a href="http://www.jiyouh.com/news/2015-03-05/131.html" title="三星认为高通骁龙810芯片不够好"><span class="ds-thread-count" data-thread-key="131" data-count-type="comments"></span></a></span></p>
                 </ul>
             </div>
         </div>
